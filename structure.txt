@@ -1,0 +1,10 @@
+Grp_id,Segment_name,Seg_element_name,Min_length,Max_length,Default_value_format
+1,ISA,ISA01,2,2,00
+2,GS,GS01,2,2,SH
+2,GS,GS02,2,15,SENDER
+2,GS,GS03,2,15,RECEIVER
+2,GS,GS04,8,8,20091231
+2,GS,GS05,4,8,1259
+2,GS,GS06,1,9,123
+2,GS,GS07,1,2,X
+2,GS,GS08,1,12,004010
