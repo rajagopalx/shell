@@ -2,6 +2,7 @@
 
 
 S_FILE=structure.txt
+J_FILE=junk.txt
 
 ISA (){
 	echo "ISA Section Goes here"
@@ -16,15 +17,43 @@ GS (){
 	
 	#Store Element of GS section from structure file as an array
 	elements=( $(cut -d',' -f3 $S_FILE  | grep GS) )
+	
+	
+	
+	echo "Content in Junk File..."
+	echo junk.txt | grep 'GS'
 
+	
+	jelements=( $(column -s* -t < $J_FILE | grep 'GS' | tr -d '~') )
+	jelements=("${jelements[@]:1}")
+
+	echo "Before Tamparing..."
+ 	
+	for (( i=0; i<${#jelements[@]}; i++ )); do
+ 		echo "GS0"$((i+1)) - ${jelements[i]}; 
+	done
+	
 	#Display Element of GS section from structure file
 	printf "\n\nAvailable Elements in GS section:\n\n"
 	for (( i=0; i<${#elements[@]}; i++ )); do
  		echo $((i+1)) - ${elements[i]}; 
 	done
+
+	read -p "Enter the Element number to be modified...." ELE_INDEX
+	read -p "Enter the new value......." NEW_VAL
+
+	nelements=("${jelements[@]}")
 	
-	echo "Enter the Element number to be modified...."
-	echo "need to code..."
+	nelements[($ELE_INDEX-1)]=$NEW_VAL
+
+	echo "Result will be..."
+
+	printf "%-10s | %-10s | %-10s\n" "ELEMENT" "BEFORE" "AFTER"
+	printf "_______________________________\n"
+
+	for (( i=0; i<${#nelements[@]}; i++ )); do
+		printf "GS0%-10s | %-10s | %s\n"  "$((i+1))"  "${jelements[i]}" "${nelements[i]}"
+	done
 }
 
 while :
