@@ -44,6 +44,10 @@ GS (){
 	read -p "Enter the Element number to be modified...." ELE_INDEX
 	read -p "Enter the new value......." NEW_VAL
 
+
+	printf "\n\nDefault Structure of GS0$NEW_VAL:\n\n"
+	column -s, -t < $S_FILE | grep "Grp_id\|GS0$NEW_VAL"
+
 	nelements=("${jelements[@]}")
 	
 	nelements[($ELE_INDEX-1)]=$NEW_VAL
@@ -59,12 +63,13 @@ GS (){
 		printf "GS0%-10s | %-10s | %s\n"  "$((i+1))" "${jelements[i]}" "${nelements[i]}"
 		newjunk=$newjunk"\*"${nelements[i]}
 	done
-	echo "$newjunk"
+	
 	newjunk="${newjunk//[$'\t\r\n ']}"
 	newjunk=$newjunk"~"
-	echo "$newjunk"
+
 	sed -i -e "s/$oldjunk_escaped/$newjunk/g" $J_FILE
 	
+	echo "Updated..."
 	
 }
 
