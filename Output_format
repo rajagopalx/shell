@@ -1,0 +1,60 @@
+************************************************
+Choose the Segment to be altered in the input file
+
+1. ISA
+2. GS
+3. ST
+4. BSN
+5. HL
+6. N1
+7. N3
+8. N4
+9. HL
+10.PRF
+11.REF
+12.HL
+13.MAN
+14.HL
+15.HL
+16.LIN
+17.CTT
+18.SE
+0. Exit
+
+
+Enter the corresponding option
+2 
+
+ST Section incorporates the following-
+
+Content present in the Input File:
+ST*856*2023~
+
+The detailed list of values present before tampering:
+ST01 - 856
+ST02 - 2023
+
+Default Structure of ST02:
+Grp_id  Segment_name  Seg_element_name  Min_length  Max_length  Default_value_format
+3       ST            ST02              4           9           0234
+
+Elements in ST section for manipulation:
+1 - ST01
+2 - ST02
+
+Enter the number from the above avalaible elements to be modified:
+2
+
+Enter the new value for modification:
+2024
+
+Replacement results will be-
+
+ELEMENT       | BEFORE     | AFTER
+_______________________________
+ST01          | 856        | 856
+ST02          | 2024  	   | 2023
+
+The replacement is updated in the Input file!!!
+
+Press Any Key to Continue, 0 Exit....
