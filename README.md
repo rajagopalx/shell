@@ -1,8 +1,7 @@
 # shell
 
-Useful Links
 
-References:
+Few References:
 
 
 http://www.thegeekstuff.com/2013/06/cut-command-examples
@@ -24,3 +23,10 @@ http://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-t
 http://unix.stackexchange.com/questions/336396/how-to-store-output-of-awk-to-array-with-empty-string-on-null-values
 
 http://unix.stackexchange.com/questions/336357/how-to-use-grep-on-column/336359#336359
+
+http://stackoverflow.com/questions/2908757/count-number-of-occurrences-of-a-pattern-in-a-file-even-on-same-line
+
+http://unix.stackexchange.com/questions/114829/display-column-that-has-a-specific-string
+
+http://unix.stackexchange.com/questions/31753/how-to-run-grep-on-a-single-column
+
