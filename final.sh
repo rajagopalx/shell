@@ -148,41 +148,23 @@ END
         read -p "Enter the option..." INPUT_NO
         case $INPUT_NO in
                 1)  replaceFn ISA 1 ;;
-
                 2)  replaceFn GS 1 ;;
-
                 3)  replaceFn ST 1 ;;
-
                 4)  replaceFn BSN 1 ;;
-
                 5)  replaceFn HL 1 ;;
-
                 6)  replaceFn N1 1 ;;
-
                 7)  replaceFn N3 1 ;;
-
                 8)  replaceFn N4 1 ;;
-
                 9)  replaceFn HL 2 ;;
-
                10)  replaceFn PRF 1 ;;
-
                11)  replaceFn REF 1 ;;
-
                12)  replaceFn HL 3 ;;
-
                13)  replaceFn MAN 1 ;;
-
                14)  replaceFn HL 4 ;;
-
                15)  replaceFn HL 5 ;;
-
                16)  replaceFn LIN 1 ;;
-
                17)  replaceFn CTT 1 ;;
-
                18)  replaceFn SE 1 ;;
-
                 0)  echo "Bye Bye.."
                     break ;;
         esac
